@@ -1,0 +1,36 @@
+create database escolatecnica;
+
+use escolatecnica;
+
+create table funcionarios(
+id int primary key,
+nome varchar(30),
+cargo varchar(20)
+);
+
+insert into funcionarios value(1,'homen-aranha','fudido','2090-12-10'),(2,'kirby','assacino de deuses','3554-1-12'),(3,'steve','pedreiro','2106-06-5'),(4,'whendeu','eu sou goku','2010-7-05'),(5,'kingles','canser','3080-05-20');
+
+select * from funcionarios;
+
+alter table funcionarios
+add column data_adimissao date;
+
+
+alter table funcionarios
+modify column nome varchar(100) not null;
+
+alter table funcionarios
+rename column cargo to funcao;
+
+alter table funcionarios
+add column extra varchar(255);
+
+alter table funcionarios
+drop column extra;
+
+delete from funcionarios
+where id=1;
+
+delete from funcionarios;
+
+set SQL_SAFE_UPDATES =0;
